@@ -1,0 +1,23 @@
+.App {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 5px 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  canvas {
+    margin-top: 10px;
+  }
+  
+  
