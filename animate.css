@@ -1,0 +1,92 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 9999;
+  }
+  
+  /* Pseudo-element for a moving light spot effect */
+  .preloader::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 60%);
+    animation: moveLight 3s linear infinite;
+  }
+  
+  /* Logo animation: starts small and scales up */
+  .logo {
+    position: relative; /* Ensure it appears above the pseudo-element */
+    z-index: 1;
+    width: 120px; /* Base size */
+    animation: scaleUp 2s ease-out forwards;
+  }
+  
+  /* Keyframes for the logo scale animation */
+  @keyframes scaleUp {
+    0% {
+      transform: scale(3);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(8);
+      opacity: 1;
+    }
+  }
+  
+  /* Adjusting for smaller screens */
+  @media (max-width: 768px) {
+    @keyframes scaleUp {
+      0% {
+        transform: scale(2);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(5);
+        opacity: 1;
+      }
+    }
+  }
+  
+  /* Adjusting for very small screens (mobile) */
+  @media (max-width: 480px) {
+    @keyframes scaleUp {
+      0% {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(3);
+        opacity: 1;
+      }
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Keyframes for the moving light spot effect */
+  @keyframes moveLight {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      transform: translate(50%, 50%);
+    }
+  }
+  
